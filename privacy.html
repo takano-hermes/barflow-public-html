@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー - BarFlow</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+      line-height: 1.8;
+      color: #222;
+      background: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    h1 {
+      font-size: 26px;
+      border-bottom: 3px solid #1a73e8;
+      padding-bottom: 12px;
+      margin-bottom: 32px;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 40px;
+      margin-bottom: 16px;
+      color: #1a73e8;
+    }
+    p {
+      margin-bottom: 16px;
+    }
+    ul {
+      margin-bottom: 16px;
+      padding-left: 24px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .updated {
+      color: #666;
+      font-size: 14px;
+      margin-top: -12px;
+      margin-bottom: 32px;
+    }
+    strong {
+      color: #111;
+    }
+    .contact {
+      background: #f5f5f5;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-top: 40px;
+    }
+    .contact h3 {
+      margin-top: 0;
+      font-size: 16px;
+    }
+    .contact p {
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>プライバシーポリシー</h1>
+  <p class="updated">最終更新日：2026年6月10日</p>
+
+  <p>本プライバシーポリシー（以下「本ポリシー」）は、高野 真樹（以下「開発者」）が提供するGoogleスプレッドシート用アドオン「BarFlow」（以下「本アドオン」）における、ユーザーデータの取扱いについて説明します。</p>
+
+  <h2>1. 収集するデータ</h2>
+  <p>本アドオンが収集するデータは以下のものに限定されます。</p>
+  <ul>
+    <li><strong>バーコード生成用データ：</strong>ユーザーが明示的に選択・設定したスプレッドシート上のセル値（バーコード化対象のテキスト・数値）のみを、アドオン実行時に一時的に読み取ります。</li>
+    <li><strong>利用状況データ：</strong>本アドオンの機能改善のため、匿名化された利用統計（例：生成されたバーコードの種類と数）を収集することがあります。このデータには個人を特定する情報は含まれません。</li>
+  </ul>
+  <p>本アドオンは、ユーザーのスプレッドシート上のすべてのデータを無差別に収集・保存することはありません。バーコード生成のために必要最小限のデータのみにアクセスします。</p>
+
+  <h2>2. データの処理方法</h2>
+  <p>バーコードの生成処理は、<strong>Google Apps Script（HtmlService）</strong>を用いてユーザーのブラウザ内で完結します。具体的な処理の流れは以下のとおりです。</p>
+  <ul>
+    <li>ユーザーがスプレッドシート上でバーコード生成対象のセルを選択します。</li>
+    <li>選択された値がアドオンサイドバーに読み込まれ、ブラウザ上のJavaScript（SVG生成ライブラリ）によってバーコード画像が生成されます。</li>
+    <li>生成されたバーコードは、Google Apps Scriptを介してスプレッドシート上の指定セルに画像として挿入されます。</li>
+  </ul>
+  <p><strong>本アドオンは外部サーバーにデータを送信しません。</strong>すべての処理はユーザーのブラウザとGoogleスプレッドシートの間で行われます。開発者が運営する外部サーバーは一切介在しません。</p>
+
+  <h2>3. データの保存と保持</h2>
+  <ul>
+    <li>本アドオンは、ユーザーデータを外部のデータベースやサーバーに保存することはありません。</li>
+    <li>バーコード生成のためのデータは、アドオンの実行中のみ一時的にメモリ上で処理され、セッション終了時に破棄されます。</li>
+    <li>すべてのデータはユーザーのGoogleスプレッドシート内に保持され、Googleのサーバー上で管理されます。データの保持期間はユーザーがスプレッドシートを削除しない限り継続します。</li>
+  </ul>
+
+  <h2>4. サードパーティサービス</h2>
+  <p>本アドオンは以下のサードパーティサービスを利用しています。</p>
+  <ul>
+    <li><strong>Stripe：</strong>有料サブスクリプションの決済処理に使用します。Stripeが収集する支払情報（クレジットカード情報等）はStripeのプライバシーポリシーに従って管理され、開発者は完全なクレジットカード情報にアクセスすることはありません。詳細は <a href="https://stripe.com/jp/privacy" target="_blank">Stripeのプライバシーポリシー</a> をご確認ください。</li>
+    <li><strong>Google Sheets API：</strong>スプレッドシート上のデータの読み取り・書き込みに使用します。データの取扱いは <a href="https://policies.google.com/privacy" target="_blank">Googleのプライバシーポリシー</a> に従います。</li>
+  </ul>
+
+  <h2>5. データの共有</h2>
+  <p>開発者は、以下の場合を除き、ユーザーデータを第三者と共有することはありません。</p>
+  <ul>
+    <li>ユーザーの明示的な同意がある場合</li>
+    <li>法令に基づき開示が要求された場合</li>
+    <li>サービスの提供に必要な範囲でサードパーティサービス（Stripe等）と連携する場合</li>
+  </ul>
+
+  <h2>6. GDPR（一般データ保護規則）への対応</h2>
+  <p>欧州経済領域（EEA）にお住まいのユーザー様に対して、以下の権利を尊重します。</p>
+  <ul>
+    <li><strong>アクセス権：</strong>ユーザーはご自身のデータへのアクセスを要求する権利を有します。</li>
+    <li><strong>訂正権：</strong>不正確なデータの訂正を要求する権利を有します。</li>
+    <li><strong>削除権（忘れられる権利）：</strong>データの削除を要求する権利を有します。本アドオンの場合、ユーザーがご自身のスプレッドシートを削除することでデータを完全に削除できます。</li>
+    <li><strong>処理制限権：</strong>特定の状況下でデータ処理の制限を要求する権利を有します。</li>
+    <li><strong>データポータビリティ権：</strong>データの移転を要求する権利を有します。</li>
+  </ul>
+  <p>これらの権利を行使されたい場合は、下記のお問い合わせ先までご連絡ください。GDPRに関するお問い合わせには30日以内に対応いたします。</p>
+
+  <h2>7. データのセキュリティ</h2>
+  <p>開発者は、ユーザーデータの保護に努めています。本アドオンはGoogle Apps Scriptの標準セキュリティモデルに従い、必要なスコープ（権限）のみを要求します。本アドオンが要求するOAuthスコープは以下のとおりです。</p>
+  <ul>
+    <li>スプレッドシートの読み取り・書き込み — バーコードの生成と挿入のため</li>
+    <li>アドオンサイドバーの表示 — ユーザーインターフェース提供のため</li>
+  </ul>
+
+  <h2>8. お問い合わせ</h2>
+  <div class="contact">
+    <h3>プライバシーに関するお問い合わせ</h3>
+    <p>開発者：高野 真樹（Masaki TAKANO）</p>
+    <p>メール：<a href="mailto:privacy@jinxiao.jp">privacy@jinxiao.jp</a></p>
+    <p>プライバシーポリシーに関するご質問、ご懸念がございましたら、上記メールアドレスまでお気軽にお問い合わせください。</p>
+  </div>
+
+  <h2>9. 本ポリシーの変更</h2>
+  <p>本ポリシーは予告なく変更されることがあります。変更があった場合は、本アドオン内または本ページにて通知いたします。重要な変更については、メールまたはアドオン内の通知によりお知らせします。</p>
+  <p>本アドオンの利用をもって、本ポリシーに同意したものとみなされます。</p>
+</div>
+</body>
+</html>
