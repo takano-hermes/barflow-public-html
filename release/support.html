@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サポート - BarFlow</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+      line-height: 1.8;
+      color: #222;
+      background: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    h1 {
+      font-size: 26px;
+      border-bottom: 3px solid #1a73e8;
+      padding-bottom: 12px;
+      margin-bottom: 32px;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 40px;
+      margin-bottom: 16px;
+      color: #1a73e8;
+    }
+    h3 {
+      font-size: 17px;
+      margin-top: 28px;
+      margin-bottom: 12px;
+      color: #333;
+    }
+    p {
+      margin-bottom: 16px;
+    }
+    ul {
+      margin-bottom: 16px;
+      padding-left: 24px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .updated {
+      color: #666;
+      font-size: 14px;
+      margin-top: -12px;
+      margin-bottom: 32px;
+    }
+    strong {
+      color: #111;
+    }
+    .contact {
+      background: #f5f5f5;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-top: 40px;
+    }
+    .contact h3 {
+      margin-top: 0;
+      font-size: 16px;
+    }
+    .contact p {
+      margin-bottom: 4px;
+    }
+    pre {
+      background: #f5f5f5;
+      border-radius: 6px;
+      padding: 16px 20px;
+      overflow-x: auto;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    code {
+      background: #f0f0f0;
+      border-radius: 3px;
+      padding: 2px 6px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>サポート</h1>
+  <p class="updated">最終更新日：2026年6月15日</p>
+
+  <nav style="margin-bottom: 32px;">
+    <ul style="list-style: none; padding: 0; display: flex; gap: 24px;">
+      <li><a href="#install">インストール方法</a></li>
+      <li><a href="#qa">ヘルプ Q&amp;A</a></li>
+      <li><a href="#support">サポートを受けるための手順</a></li>
+    </ul>
+  </nav>
+
+  <h2 id="install">1. インストール方法</h2>
+
+  <h3>Google Workspace Marketplace からインストール（準備中）</h3>
+  <p>BarFlow は Google Workspace Marketplace からのインストールに対応予定です（後日公開予定）。公開され次第、Marketplace から直接インストールいただけるようになります。</p>
+
+
+
+  <h2 id="qa">2. ヘルプ Q&amp;A</h2>
+
+  <h3>基本操作</h3>
+  <ul>
+    <li><strong>Q: サイドバーが開かない</strong><br>
+    A: スプレッドシートを再読み込み → メニュー「BarFlow」→「サイドバーを開く」を選択してください。</li>
+    <li><strong>Q: メニューにBarFlowが表示されない</strong><br>
+    A: アドオン管理画面でBarFlowがインストールされているか確認し、必要に応じて再インストールを試してください。</li>
+    <li><strong>Q: 生成したバーコードがシートに表示されない</strong><br>
+    A: 画像列が別のデータで上書きされていないか確認してください。</li>
+  </ul>
+
+  <h3>バーコード生成</h3>
+  <ul>
+    <li><strong>Q: 対応しているバーコード形式は？</strong><br>
+    A: QR, JAN(EAN-13/EAN-8), CODE128, GS1-128, CODE39, ITF, NW-7(CODABAR) の7種に対応しています。</li>
+    <li><strong>Q: QRコードに日本語は入れられる？</strong><br>
+    A: 対応しています。日本語の文字列もQRコードとして生成可能です。</li>
+    <li><strong>Q: バーコードのサイズを変更したい</strong><br>
+    A: サイドバーの「画像サイズ」設定で調整可能です。</li>
+    <li><strong>Q: バーコードに文字を表示したい／消したい</strong><br>
+    A: サイドバーの設定で表示／非表示を切り替えられます。</li>
+  </ul>
+
+
+  <h3>課金・サブスクリプション</h3>
+  <ul>
+    <li><strong>Q: 料金は？</strong><br>
+    A: 月額¥980 / 年額¥10,000です。14日間の無料トライアルがあります。</li>
+    <li><strong>Q: 解約方法は？</strong><br>
+    A: アドオン内の設定、またはGoogle Workspace Marketplaceのサブスクリプション管理画面から解約できます。</li>
+    <li><strong>Q: 無料トライアル中に解約したら課金される？</strong><br>
+    A: されません。トライアル期間中に解約しても一切の課金は発生しません。</li>
+    <li><strong>Q: 支払い方法は？</strong><br>
+    A: Stripe経由のクレジットカードに対応しています。</li>
+  </ul>
+
+  <h3>エラー・トラブルシューティング</h3>
+  <ul>
+    <li><strong>Q: 「権限が不足しています」と出る</strong><br>
+    A: 必要なOAuthスコープが承認されていない可能性があります。アドオンを再インストールして全ての権限を承認してください。</li>
+    <li><strong>Q: 「URLFetchApp の呼び出しに失敗しました」</strong><br>
+    A: インターネット接続を確認してください。Cloud Run エンドポイントが正しく設定されているかもご確認ください。</li>
+    <li><strong>Q: エラーが発生してバーコードが生成できない</strong><br>
+    A: 値が空でないか、文字数制限（CODE128は可変長、JANは13桁等）を満たしているか確認してください。</li>
+  </ul>
+
+  <h3>プライバシー・データ</h3>
+  <ul>
+    <li><strong>Q: 私のデータは外部に送信されますか？</strong><br>
+    A: バーコード値は Cloud Run で処理するために送信されます。詳しくは<a href="privacy.html">プライバシーポリシー</a>をご確認ください。</li>
+    <li><strong>Q: 生成したバーコード画像はどこに保存されますか？</strong><br>
+    A: Google Cloud Storage (barflow-generate) に保存され、一定期間後に自動削除されます。</li>
+  </ul>
+
+  <h2 id="support">3. サポートを受けるための手順</h2>
+
+  <h3>サポートIDの確認方法</h3>
+  <ul>
+    <li>サイドバー下部に「あなたのサポートID: XXXX-XXXX-XXXX-XXXX」と表示されています。</li>
+    <li>サポートIDはアドオン初回実行時に自動生成され、変更はできません。</li>
+    <li>サポートIDはUUIDの前方4セグメント（8-4-4-4形式）です。</li>
+  </ul>
+
+  <h3>サポートIDがない（メニューにインストールされていない場合）</h3>
+  <ul>
+    <li>スプレッドシートを再読み込みしてください。</li>
+    <li>メニューバーに「BarFlow」が表示されることを確認してください。</li>
+    <li>表示されない場合：アドオン → アドオンを管理 → BarFlow が一覧に表示されているか確認してください。</li>
+    <li>それでも表示されない場合は、Google Workspace Marketplace から再インストールを試してください。</li>
+  </ul>
+
+  <p>上記の内容をご確認の上、<a href="https://forms.gle/RJiTSjPXzzca3FRJ6" target="_blank">こちらのお問い合わせフォーム</a>よりお問い合わせください。</p>
+
+
+</div>
+</body>
+</html>
