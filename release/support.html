@@ -90,60 +90,22 @@
   <h1>サポート</h1>
   <p class="updated">最終更新日：2026年6月15日</p>
 
-  <h2>1. インストール方法</h2>
+  <nav style="margin-bottom: 32px;">
+    <ul style="list-style: none; padding: 0; display: flex; gap: 24px;">
+      <li><a href="#install">インストール方法</a></li>
+      <li><a href="#qa">ヘルプ Q&amp;A</a></li>
+      <li><a href="#support">サポートを受けるための手順</a></li>
+    </ul>
+  </nav>
+
+  <h2 id="install">1. インストール方法</h2>
 
   <h3>Google Workspace Marketplace からインストール（準備中）</h3>
   <p>BarFlow は Google Workspace Marketplace からのインストールに対応予定です（後日公開予定）。公開され次第、Marketplace から直接インストールいただけるようになります。</p>
 
-  <h3>開発者モード（clasp）でのテストインストール</h3>
-  <p>以下の手順でテストインストールが可能です。</p>
-  <ul>
-    <li>clasp を使用してアドオンプロジェクトを Google Drive 上の任意のスプレッドシートにデプロイします。</li>
-    <li>デプロイ完了後、テスト用のスプレッドシートを開き、アドオン管理画面からインストールを実行してください。</li>
-    <li>インストール後にスプレッドシートを再読み込みすると、メニューバーに「BarFlow」が追加されます。</li>
-    <li>メニューから「サイドバーを開く」をクリックすると、BarFlowのサイドバーが起動します。</li>
-    <li>初回起動時にはセットアップウィザードが自動的に表示されます。</li>
-  </ul>
 
-  <h2>2. メールでサポートを受けるための手順</h2>
 
-  <h3>サポートIDの確認方法</h3>
-  <ul>
-    <li>サイドバー下部に「あなたのサポートID: XXXX-XXXX-XXXX-XXXX」と表示されています。</li>
-    <li>サポートIDはアドオン初回実行時に自動生成され、変更はできません。</li>
-    <li>サポートIDはUUIDの前方4セグメント（8-4-4-4形式）です。</li>
-  </ul>
-
-  <h3>サポートIDがない（メニューにインストールされていない場合）</h3>
-  <ul>
-    <li>スプレッドシートを再読み込みしてください。</li>
-    <li>メニューバーに「BarFlow」が表示されることを確認してください。</li>
-    <li>表示されない場合：アドオン → アドオンを管理 → BarFlow が一覧に表示されているか確認してください。</li>
-    <li>それでも表示されない場合は、Google Workspace Marketplace から再インストールを試してください。</li>
-  </ul>
-
-  <h3>メールの宛先</h3>
-  <p><a href="mailto:jinxiao777+barflow-support@gmail.com">jinxiao777+barflow-support@gmail.com</a></p>
-
-  <h3>メールに記載する項目</h3>
-  <p>件名：<strong>【BarFlow サポート】&lt;簡単な内容&gt;</strong></p>
-  <p>本文テンプレート：</p>
-  <pre>■ サポートID: [サイドバー下部に表示されているID]
-■ お名前: [必須]
-■ バーコード種別: [QR / JAN / CODE128 / CODE39 / NW-7 / ITF]
-■ 発生した現象:
-（具体的に記述してください）
-
-■ 再現手順:
-1.
-2.
-3.
-
-■ 期待する動作:
-■ 実際の動作:
-■ スクリーンショット: [あれば添付]</pre>
-
-  <h2>3. ヘルプ Q&amp;A</h2>
+  <h2 id="qa">2. ヘルプ Q&amp;A</h2>
 
   <h3>基本操作</h3>
   <ul>
@@ -167,15 +129,6 @@
     A: サイドバーの設定で表示／非表示を切り替えられます。</li>
   </ul>
 
-  <h3>自動追跡（Change Tracker）</h3>
-  <ul>
-    <li><strong>Q: 自動追跡が動かない</strong><br>
-    A: Change Trackerが有効か確認してください。サイドバーの「自動追跡を有効化」をオンにすると動作します。</li>
-    <li><strong>Q: 値を変更してもバーコードが更新されない</strong><br>
-    A: 変更から数分かかる場合があります。手動で更新したい場合はサイドバーの「一括生成」を実行してください。</li>
-    <li><strong>Q: 不要な行のバーコードを削除したい</strong><br>
-    A: シート上で該当セルの画像を削除するか、値の列をクリアしてください。</li>
-  </ul>
 
   <h3>課金・サブスクリプション</h3>
   <ul>
@@ -207,11 +160,26 @@
     A: Google Cloud Storage (barflow-generate) に保存され、一定期間後に自動削除されます。</li>
   </ul>
 
-  <div class="contact">
-    <h3>お問い合わせ</h3>
-    <p>メール：<a href="mailto:jinxiao777+barflow-support@gmail.com">jinxiao777+barflow-support@gmail.com</a></p>
-    <p>上記の内容をご確認の上、必要事項を明記してお問い合わせください。</p>
-  </div>
+  <h2 id="support">3. サポートを受けるための手順</h2>
+
+  <h3>サポートIDの確認方法</h3>
+  <ul>
+    <li>サイドバー下部に「あなたのサポートID: XXXX-XXXX-XXXX-XXXX」と表示されています。</li>
+    <li>サポートIDはアドオン初回実行時に自動生成され、変更はできません。</li>
+    <li>サポートIDはUUIDの前方4セグメント（8-4-4-4形式）です。</li>
+  </ul>
+
+  <h3>サポートIDがない（メニューにインストールされていない場合）</h3>
+  <ul>
+    <li>スプレッドシートを再読み込みしてください。</li>
+    <li>メニューバーに「BarFlow」が表示されることを確認してください。</li>
+    <li>表示されない場合：アドオン → アドオンを管理 → BarFlow が一覧に表示されているか確認してください。</li>
+    <li>それでも表示されない場合は、Google Workspace Marketplace から再インストールを試してください。</li>
+  </ul>
+
+  <p>上記の内容をご確認の上、<a href="https://forms.gle/RJiTSjPXzzca3FRJ6" target="_blank">こちらのお問い合わせフォーム</a>よりお問い合わせください。</p>
+
+
 </div>
 </body>
 </html>
