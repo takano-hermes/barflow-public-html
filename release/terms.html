@@ -67,7 +67,7 @@
 <body>
 <div class="container">
   <h1>利用規約</h1>
-  <p class="updated">最終更新日：2026年6月10日</p>
+  <p class="updated">最終更新日：2026年6月15日</p>
 
   <p>本利用規約（以下「本規約」）は、BarFlow（以下「開発者」）が提供するGoogleスプレッドシート用アドオン「BarFlow」（以下「本アドオン」）の利用条件を定めるものです。本アドオンをご利用いただく前に、本規約をよくお読みいただき、同意の上でご利用ください。</p>
 
@@ -89,7 +89,7 @@
     <li>ITF (Interleaved 2 of 5)</li>
     <li>NW-7 (CODABAR)</li>
   </ul>
-  <p>本アドオンはGoogle Apps Script（HtmlService）を使用し、ブラウザ上でSVGバーコードを生成します。外部サーバーへのデータ送信は行われません。</p>
+  <p>本アドオンは、Google Apps Script から <strong>Cloud Run</strong>（cr.barflow.g.jinxiao.jp）にバーコード値とタイプを送信し、サーバーサイド（Node.js + bwip-js）で SVG および PNG のバーコード画像を生成します。生成された画像は <strong>Google Cloud Storage</strong>（barflow-generate バケット）に保存され、画像 URL が GAS に返却されてスプレッドシートに挿入されます。</p>
 
   <h2>3. 無料トライアル</h2>
   <ul>
