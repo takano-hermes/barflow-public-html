@@ -69,7 +69,7 @@
   <h1>プライバシーポリシー</h1>
   <p class="updated">最終更新日：2026年6月15日</p>
 
-  <p>本プライバシーポリシー（以下「本ポリシー」）は、BarFlow（以下「開発者」）が提供するGoogleスプレッドシート用アドオン「BarFlow」（以下「本アドオン」）における、ユーザーデータの取扱いについて説明します。</p>
+  <p>本プライバシーポリシー（以下「本ポリシー」）は、BarFlow（以下「開発者」）が提供するGoogleスプレッドシート&trade;用アドオン「BarFlow」（以下「本アドオン」）における、ユーザーデータの取扱いについて説明します。</p>
 
   <h2>1. 収集するデータ</h2>
   <p>本アドオンが収集するデータは以下のものに限定されます。</p>
@@ -83,30 +83,30 @@
   <p>バーコードの生成処理は、以下の通りクラウド基盤上で行われます。</p>
   <ul>
     <li>ユーザーがスプレッドシート上でバーコード生成対象のセルを選択します。</li>
-    <li>選択されたバーコード値とタイプが、<strong>Google Apps Script</strong> から <strong>Cloud Run</strong>（cr.barflow.g.jinxiao.jp）に IdToken 認証付きで POST 送信されます。</li>
+    <li>選択されたバーコード値とタイプが、<strong>Google Apps Script&trade;</strong> から <strong>Cloud Run</strong>（cr.barflow.g.jinxiao.jp）に IdToken 認証付きで POST 送信されます。</li>
     <li>Cloud Run（Node.js + bwip-js）にて SVG と PNG の両方のバーコード画像が生成されます。</li>
-    <li>生成された画像は <strong>Google Cloud Storage</strong>（barflow-generate バケット）に保存されます。</li>
+    <li>生成された画像は <strong>Google Cloud Storage&trade;</strong>（barflow-generate バケット）に保存されます。</li>
     <li>画像のメタデータは <strong>Firestore</strong>（barflow-barcodes コレクション）に保存されます。</li>
     <li>画像 URL が GAS に返却され、スプレッドシート上の指定セルに画像として挿入されます。</li>
   </ul>
-  <p>これらの処理はすべてユーザーのブラウザ上ではなく、Google Cloud 上のサーバーサイドで実行されます。</p>
+  <p>これらの処理はすべてユーザーのブラウザ上ではなく、Google Cloud&trade; 上のサーバーサイドで実行されます。</p>
 
   <h2>3. データの保存と保持</h2>
   <ul>
-    <li>生成されたバーコード画像は <strong>Google Cloud Storage</strong>（barflow-generate バケット）に保存されます。画像は生成から一定期間経過後に自動的に削除されます。</li>
+    <li>生成されたバーコード画像は <strong>Google Cloud Storage&trade;</strong>（barflow-generate バケット）に保存されます。画像は生成から一定期間経過後に自動的に削除されます。</li>
     <li>バーコードのメタデータ（生成日時、バーコードタイプ、対応する画像パス等）は <strong>Firestore</strong>（barflow-barcodes コレクション）に保存されます。</li>
     <li>バーコード生成のために読み取られた元データそのもの（スプレッドシート上のセル値）は、Cloud Run および GCS・Firestore には保存されません。生成処理完了後にサーバーサイドのメモリ上から破棄されます。</li>
-    <li>すべてのユーザーデータはユーザーの Google スプレッドシート内に保持され、Google のサーバー上で管理されます。データの保持期間はユーザーがスプレッドシートを削除しない限り継続します。</li>
+    <li>すべてのユーザーデータはユーザーの Google&trade; スプレッドシート内に保持され、Google&trade; のサーバー上で管理されます。データの保持期間はユーザーがスプレッドシートを削除しない限り継続します。</li>
   </ul>
 
   <h2>4. サードパーティサービス</h2>
   <p>本アドオンは以下のサードパーティサービスを利用しています。</p>
   <ul>
-    <li><strong>Google Cloud Run：</strong>バーコード画像の生成処理（Node.js + bwip-js）を実行するサーバーレスコンテナです。バーコード値とタイプが処理のために送信されます。詳細は <a href="https://cloud.google.com/run/privacy" target="_blank">Google Cloud Run のデータ処理</a> をご確認ください。</li>
-    <li><strong>Google Cloud Storage：</strong>生成されたバーコード画像の保存に使用します（barflow-generate バケット）。詳細は <a href="https://cloud.google.com/privacy" target="_blank">Google Cloud のプライバシーポリシー</a> をご確認ください。</li>
-    <li><strong>Firestore：</strong>バーコードのメタデータ（生成日時、タイプ、画像パス等）の保存に使用します（barflow-barcodes コレクション）。詳細は <a href="https://cloud.google.com/privacy" target="_blank">Google Cloud のプライバシーポリシー</a> をご確認ください。</li>
+    <li><strong>Google Cloud Run&trade;：</strong>バーコード画像の生成処理（Node.js + bwip-js）を実行するサーバーレスコンテナです。バーコード値とタイプが処理のために送信されます。詳細は <a href="https://cloud.google.com/run/privacy" target="_blank">Google Cloud Run&trade; のデータ処理</a> をご確認ください。</li>
+    <li><strong>Google Cloud Storage&trade;：</strong>生成されたバーコード画像の保存に使用します（barflow-generate バケット）。詳細は <a href="https://cloud.google.com/privacy" target="_blank">Google Cloud&trade; のプライバシーポリシー</a> をご確認ください。</li>
+    <li><strong>Firestore：</strong>バーコードのメタデータ（生成日時、タイプ、画像パス等）の保存に使用します（barflow-barcodes コレクション）。詳細は <a href="https://cloud.google.com/privacy" target="_blank">Google Cloud&trade; のプライバシーポリシー</a> をご確認ください。</li>
     <li><strong>Stripe：</strong>有料サブスクリプションの決済処理に使用します。Stripeが収集する支払情報（クレジットカード情報等）はStripeのプライバシーポリシーに従って管理され、開発者は完全なクレジットカード情報にアクセスすることはありません。詳細は <a href="https://stripe.com/jp/privacy" target="_blank">Stripeのプライバシーポリシー</a> をご確認ください。</li>
-    <li><strong>Google Sheets API：</strong>スプレッドシート上のデータの読み取り・書き込みに使用します。データの取扱いは <a href="https://policies.google.com/privacy" target="_blank">Googleのプライバシーポリシー</a> に従います。</li>
+    <li><strong>Google Sheets API&trade;：</strong>スプレッドシート上のデータの読み取り・書き込みに使用します。データの取扱いは <a href="https://policies.google.com/privacy" target="_blank">Google&trade;のプライバシーポリシー</a> に従います。</li>
   </ul>
 
   <h2>5. データの共有</h2>
@@ -129,7 +129,7 @@
   <p>これらの権利を行使されたい場合は、下記のお問い合わせ先までご連絡ください。GDPRに関するお問い合わせには30日以内に対応いたします。</p>
 
   <h2>7. データのセキュリティ</h2>
-  <p>開発者は、ユーザーデータの保護に努めています。本アドオンはGoogle Apps Scriptの標準セキュリティモデルに従い、必要なスコープ（権限）のみを要求します。本アドオンが要求するOAuthスコープは以下のとおりです。</p>
+  <p>開発者は、ユーザーデータの保護に努めています。本アドオンはGoogle Apps Script&trade;の標準セキュリティモデルに従い、必要なスコープ（権限）のみを要求します。本アドオンが要求するOAuthスコープは以下のとおりです。</p>
   <ul>
     <li><strong>spreadsheets.currentonly</strong> — 現在のスプレッドシートへの読み取り・書き込み（バーコードの生成と挿入のため）</li>
     <li><strong>script.container.ui</strong> — アドオンサイドバーおよびダイアログの表示（ユーザーインターフェース提供のため）</li>
@@ -138,7 +138,7 @@
     <li><strong>script.external_request</strong> — Cloud Run への HTTP リクエスト（バーコード生成API呼び出し）のため</li>
     <li><strong>drive.file</strong> — ZIPファイル作成とダウンロードのため</li>
   </ul>
-  <p>Cloud Run へのリクエストは <strong>IdToken 認証</strong> により保護されており、正規のアドオンからのみアクセス可能です。各 Google Cloud サービス間の通信は Google のインフラストラクチャ内で暗号化されています。</p>
+  <p>Cloud Run へのリクエストは <strong>IdToken 認証</strong> により保護されており、正規のアドオンからのみアクセス可能です。各 Google Cloud&trade; サービス間の通信は Google&trade; のインフラストラクチャ内で暗号化されています。</p>
 
   <h2>8. お問い合わせ</h2>
   <div class="contact">
